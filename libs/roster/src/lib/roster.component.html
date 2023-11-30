@@ -1,0 +1,26 @@
+<div class="roster-page">
+    <div class="container">
+      <h1>Conduit Roaster</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Profile</th>
+            <th>Articles Count</th>
+            <th>Total Favorites</th>
+            <th>First Article Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let author of rosterData">
+            <td>{{ author.username }}</td>
+            <td><a [href]="author.profileLink">Profile</a></td>
+            <td>{{ author.articleCount }}</td>
+            <td>{{ author.totalFavorites }}</td>
+            <td>{{ author.firstArticleDate | date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
